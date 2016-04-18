@@ -30,7 +30,7 @@ $ret["section is :".$y]=$sectionarr;
 echo json_encode($ret);
 }
 }
-}
+
 
 
 
