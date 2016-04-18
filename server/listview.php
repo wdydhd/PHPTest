@@ -18,13 +18,20 @@ echo json_encode($ret);
 
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
 $test = $_GET["test"];
+$section=$_GET["section"];
+$section=intval($section);
 $ret = array();
-for($x=0;$x<10;$x++){
-$ret[]=$test.$x.$x.$x;
+for($y=0;$y<$section;$y++){
+$sectionarr=array();
+for($x=0;$x<5;$x++){
+$sectionarr[]=$test.$x.$x.$x;
 }
-echo htmlspecialchars(json_encode($ret));
+$ret["section is :".$y]=$sectionarr;
+echo json_encode($ret);
+}
+}
+}
 
-}
 
 
 
