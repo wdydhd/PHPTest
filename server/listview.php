@@ -12,7 +12,7 @@ echo json_encode($ret);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
-$test = $_POST["test"];
+$test = $_GET["test"];
 $ret = array();
 for($x=0;$x<10;$x++){
 $ret[]=$test.$x.$x.$x;
