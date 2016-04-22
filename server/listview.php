@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
 $test = $_GET["test"];
 $section=$_GET["section"];
 $section=intval($section);
+
 $ret = array();
 for($y=0;$y<$section;$y++){
 $sectionarr=array();
@@ -30,7 +31,7 @@ $ret["section is :".$y]=$sectionarr;
 }
 echo json_encode($ret);
 
-echo -n readfile ("test");
+echo readfile ("test");
 
 $myfile = fopen("test","r") or die ("none!");
 echo fread($myfile,filesize(test));
