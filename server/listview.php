@@ -29,6 +29,8 @@ $sectionarr[]=$test.$x.$x.$x;
 $ret["section is :".$y]=$sectionarr;
 }
 echo json_encode($ret);
+
+echo readfile ("test");
 }
 
 
