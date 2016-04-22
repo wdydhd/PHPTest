@@ -1,8 +1,10 @@
 <?php 
 setcookie("user", "Alex Porter", time()+3600);
 
+$value = "my cookie value";
 
-setrawcookie("usera", "Alex Porter2", time()+3600);
+// 发送一个 24 小时候过期的 cookie
+setrawcookie("TestCookie",$value, time()+3600*24);
 ?>
 
 <html>
