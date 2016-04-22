@@ -23,7 +23,7 @@ $myfile = fopen("test", "w") or die("Unable to open file!");
 fwrite($myfile,$txt);
 fclose($myfile);
 
-echo readwile("test");
+echo readfile("test");
 return;
 }
 
