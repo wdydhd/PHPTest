@@ -17,6 +17,16 @@ echo json_encode($ret);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
+if ($_GET("write")){
+$txt = "I am a test txt .\n\r";
+$myfile = fopen("test", "w") or die("Unable to open file!");
+fwrite($myfile,$txt);
+fclose($myfile);
+
+echo readwile("test");
+return;
+}
+
 $test = $_GET["test"];
 $section=$_GET["section"];
 $section=intval($section);
