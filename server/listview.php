@@ -30,7 +30,13 @@ $ret["section is :".$y]=$sectionarr;
 }
 echo json_encode($ret);
 
-echo readfile ("test");
+echo -n readfile ("test");
+
+$myfile = fopen("test","r") or die ("none!");
+echo fread($myfile,filesize(test));
+fclose($myfile);
+
+
 }
 
 
