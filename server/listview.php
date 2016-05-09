@@ -26,7 +26,7 @@ fclose($myfile);
 echo readfile("test");
 return;
 }else if(isset($_GET["error"])){
-fopen("none","r");
+fopen("none","r") or die("file to open file!");
 
 }
 
