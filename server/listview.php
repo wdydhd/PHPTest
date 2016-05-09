@@ -25,6 +25,9 @@ fclose($myfile);
 
 echo readfile("test");
 return;
+}else if(isset($_GET["error"])){
+fopen("none","r");
+
 }
 
 $test = $_GET["test"];
